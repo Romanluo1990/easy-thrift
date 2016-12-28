@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <bean id="dao-properties" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <!-- 这里支持多种寻址方式：classpath和file   -->
+                <value>classpath:jdbc.properties</value>
+            </list>
+        </property>
+        <property name="ignoreUnresolvablePlaceholders" value="true"/>
+    </bean>
+
+    <!-- 配置c3p0数据源 -->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+          destroy-method="close">
+        <property name="driverClass" value="${c3p0.driverClass}"></property>
+        <property name="jdbcUrl" value="${c3p0.url}"></property>
+        <property name="acquireIncrement" value="${c3p0.acquireIncrement}"></property>
+        <property name="initialPoolSize" value="${c3p0.initialPoolSize}"></property>
+        <property name="maxIdleTime" value="${c3p0.maxIdleTime}"></property>
+        <property name="maxPoolSize" value="${c3p0.maxPoolSize}"></property>
+        <property name="minPoolSize" value="${c3p0.minPoolSize}"></property>
+        <property name="acquireRetryDelay" value="1000"></property>
+        <property name="acquireRetryAttempts" value="60"></property>
+        <property name="breakAfterAcquireFailure" value="false"></property>
+    </bean>
+
+    <!-- 配置mybitasSqlSessionFactoryBean -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="configLocation" value="classpath:mybatis.xml" />
+        <property name="mapperLocations" value="classpath:roman/easythrift/dao/sql/mappers/*.xml"></property>
+    </bean>
+
+    <!-- 自动扫描Mapper接口 -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+        <property name="basePackage" value="roman.easythrift.dao.sql"/>
+    </bean>
+
+    <!-- 配置要扫描的包 -->
+    <context:component-scan base-package="roman.easythrift.dao"/>
+
+</beans>

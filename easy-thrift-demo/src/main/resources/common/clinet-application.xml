@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!-- 配置文件 -->
+    <bean id="thrift-config" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:thrift.properties</value>
+            </list>
+        </property>
+        <property name="ignoreUnresolvablePlaceholders" value="true" />
+    </bean>
+
+    <!--proxy-target-class="true"使用cglib代理 开启支持aspectj -->
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
+
+    <!--使用ThriftClientAspect-->
+    <bean id="thriftClientAspect" class="roman.easythrift.client.ThriftClientAspect">
+    </bean>
+
+    <bean id="personThriftClient" class="roman.easythrift.thrift.clinet.PersonThriftClient">
+        <constructor-arg name="host" value="${demo.person.host}"></constructor-arg>
+        <constructor-arg name="port" value="${demo.person.port}"></constructor-arg>
+    </bean>
+
+</beans>

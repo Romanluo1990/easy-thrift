@@ -1,0 +1,17 @@
+.svn/
+.settings/
+.project
+target/
+.classpath
+*.iml
+*.ipr
+*.iws
+.idea/
+generator/
+*.DS_Store
+node_modules/
+npm-debug.log
+debug/
+classes
+logs
+debug_tab/
