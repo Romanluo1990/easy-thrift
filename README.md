@@ -45,6 +45,7 @@ easy-thrift是利用spring的切面对thrift的简单封装，是的在spring中
         客户端输出结果：Tom
 
 
+##其他
 
 * 邮件(530827804#qq.com, 把#换成@)
 * QQ: 530827804
