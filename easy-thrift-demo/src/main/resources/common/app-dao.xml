@@ -35,7 +35,7 @@
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <property name="configLocation" value="classpath:mybatis.xml" />
-        <property name="mapperLocations" value="classpath:roman/easythrift/dao/sql/mappers/*.xml"></property>
+        <property name="mapperLocations" value="classpath:roman/easythrift/demo/dao/sql/mappers/*.xml"></property>
     </bean>
 
     <!-- 自动扫描Mapper接口 -->
@@ -45,6 +45,6 @@
     </bean>
 
     <!-- 配置要扫描的包 -->
-    <context:component-scan base-package="roman.easythrift.dao"/>
+    <context:component-scan base-package="roman.easythrift.demo.dao"/>
 
 </beans>

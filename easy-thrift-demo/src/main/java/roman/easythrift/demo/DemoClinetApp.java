@@ -1,11 +1,11 @@
-package roman.easythrift;
+package roman.easythrift.demo;
 
 import org.apache.thrift.TException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import roman.easythrift.thrift.clinet.PersonThriftClient;
-import roman.easythrift.thrift.generated.TPerson;
+import roman.easythrift.demo.thrift.clinet.PersonThriftClient;
+import roman.easythrift.demo.thrift.generated.TPerson;
 
 /**
  * Created by roman.luo on 2016/11/15.

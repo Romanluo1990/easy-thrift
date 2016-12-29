@@ -1,7 +1,7 @@
-package roman.easythrift.dao.sql;
+package roman.easythrift.demo.dao.sql;
 
 
-import roman.easythrift.domain.Person;
+import roman.easythrift.demo.domain.Person;
 
 /**
  * Created by roman.luo on 2016/11/17.

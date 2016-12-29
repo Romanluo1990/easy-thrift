@@ -7,11 +7,11 @@
     </settings>
 
     <typeAliases>
-        <package name="roman.easythrift.domain"></package>
+        <package name="roman.easythrift.demo.domain"></package>
     </typeAliases>
 
     <mappers>
-        <package name="roman.easythrift.dao.sql.mappers"></package>
+        <package name="roman.easythrift.demo.dao.sql.mappers"></package>
     </mappers>
 
 

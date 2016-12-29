@@ -1,4 +1,4 @@
-package roman.easythrift.server;
+package roman.easythrift.demo.server;
 
 
 import org.apache.thrift.TProcessor;

@@ -1,4 +1,4 @@
-package roman.easythrift.domain;
+package roman.easythrift.demo.domain;
 
 /**
  * Created by roman.luo on 2016/12/27.

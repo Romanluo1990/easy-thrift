@@ -4,7 +4,7 @@
  * DO NOT EDIT UNLESS YOU ARE SURE THAT YOU KNOW WHAT YOU ARE DOING
  *  @generated
  */
-package roman.easythrift.thrift.generated;
+package roman.easythrift.demo.thrift.generated;
 
 import org.apache.thrift.TException;
 import org.apache.thrift.async.AsyncMethodCallback;
@@ -26,7 +26,7 @@ public class TPersonThriftServer {
 
   public interface Iface {
 
-    public roman.easythrift.thrift.generated.TPerson queryById(String id) throws org.apache.thrift.TException;
+    public TPerson queryById(String id) throws org.apache.thrift.TException;
 
   }
 
@@ -56,7 +56,7 @@ public class TPersonThriftServer {
       super(iprot, oprot);
     }
 
-    public roman.easythrift.thrift.generated.TPerson queryById(String id) throws org.apache.thrift.TException
+    public TPerson queryById(String id) throws org.apache.thrift.TException
     {
       send_queryById(id);
       return recv_queryById();
@@ -69,7 +69,7 @@ public class TPersonThriftServer {
       sendBase("queryById", args);
     }
 
-    public roman.easythrift.thrift.generated.TPerson recv_queryById() throws org.apache.thrift.TException
+    public TPerson recv_queryById() throws org.apache.thrift.TException
     {
       queryById_result result = new queryById_result();
       receiveBase(result, "queryById");
@@ -119,7 +119,7 @@ public class TPersonThriftServer {
         prot.writeMessageEnd();
       }
 
-      public roman.easythrift.thrift.generated.TPerson getResult() throws org.apache.thrift.TException {
+      public TPerson getResult() throws org.apache.thrift.TException {
         if (getState() != org.apache.thrift.async.TAsyncMethodCall.State.RESPONSE_READ) {
           throw new IllegalStateException("Method call not finished!");
         }
@@ -183,7 +183,7 @@ public class TPersonThriftServer {
       return processMap;
     }
 
-    public static class queryById<I extends AsyncIface> extends org.apache.thrift.AsyncProcessFunction<I, queryById_args, roman.easythrift.thrift.generated.TPerson> {
+    public static class queryById<I extends AsyncIface> extends org.apache.thrift.AsyncProcessFunction<I, queryById_args, TPerson> {
       public queryById() {
         super("queryById");
       }
@@ -192,10 +192,10 @@ public class TPersonThriftServer {
         return new queryById_args();
       }
 
-      public AsyncMethodCallback<roman.easythrift.thrift.generated.TPerson> getResultHandler(final AsyncFrameBuffer fb, final int seqid) {
+      public AsyncMethodCallback<TPerson> getResultHandler(final AsyncFrameBuffer fb, final int seqid) {
         final org.apache.thrift.AsyncProcessFunction fcall = this;
-        return new AsyncMethodCallback<roman.easythrift.thrift.generated.TPerson>() { 
-          public void onComplete(roman.easythrift.thrift.generated.TPerson o) {
+        return new AsyncMethodCallback<TPerson>() {
+          public void onComplete(TPerson o) {
             queryById_result result = new queryById_result();
             result.success = o;
             try {
@@ -229,7 +229,7 @@ public class TPersonThriftServer {
         return false;
       }
 
-      public void start(I iface, queryById_args args, org.apache.thrift.async.AsyncMethodCallback<roman.easythrift.thrift.generated.TPerson> resultHandler) throws TException {
+      public void start(I iface, queryById_args args, org.apache.thrift.async.AsyncMethodCallback<TPerson> resultHandler) throws TException {
         iface.queryById(args.id,resultHandler);
       }
     }
@@ -608,7 +608,7 @@ public class TPersonThriftServer {
       schemes.put(TupleScheme.class, new queryById_resultTupleSchemeFactory());
     }
 
-    public roman.easythrift.thrift.generated.TPerson success; // required
+    public TPerson success; // required
 
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
@@ -673,7 +673,7 @@ public class TPersonThriftServer {
     static {
       Map<_Fields, org.apache.thrift.meta_data.FieldMetaData> tmpMap = new EnumMap<_Fields, org.apache.thrift.meta_data.FieldMetaData>(_Fields.class);
       tmpMap.put(_Fields.SUCCESS, new org.apache.thrift.meta_data.FieldMetaData("success", org.apache.thrift.TFieldRequirementType.DEFAULT, 
-          new org.apache.thrift.meta_data.StructMetaData(org.apache.thrift.protocol.TType.STRUCT, roman.easythrift.thrift.generated.TPerson.class)));
+          new org.apache.thrift.meta_data.StructMetaData(org.apache.thrift.protocol.TType.STRUCT, TPerson.class)));
       metaDataMap = Collections.unmodifiableMap(tmpMap);
       org.apache.thrift.meta_data.FieldMetaData.addStructMetaDataMap(queryById_result.class, metaDataMap);
     }
@@ -682,7 +682,7 @@ public class TPersonThriftServer {
     }
 
     public queryById_result(
-      roman.easythrift.thrift.generated.TPerson success)
+      TPerson success)
     {
       this();
       this.success = success;
@@ -693,7 +693,7 @@ public class TPersonThriftServer {
      */
     public queryById_result(queryById_result other) {
       if (other.isSetSuccess()) {
-        this.success = new roman.easythrift.thrift.generated.TPerson(other.success);
+        this.success = new TPerson(other.success);
       }
     }
 
@@ -706,11 +706,11 @@ public class TPersonThriftServer {
       this.success = null;
     }
 
-    public roman.easythrift.thrift.generated.TPerson getSuccess() {
+    public TPerson getSuccess() {
       return this.success;
     }
 
-    public queryById_result setSuccess(roman.easythrift.thrift.generated.TPerson success) {
+    public queryById_result setSuccess(TPerson success) {
       this.success = success;
       return this;
     }
@@ -736,7 +736,7 @@ public class TPersonThriftServer {
         if (value == null) {
           unsetSuccess();
         } else {
-          setSuccess((roman.easythrift.thrift.generated.TPerson)value);
+          setSuccess((TPerson)value);
         }
         break;
 
@@ -895,7 +895,7 @@ public class TPersonThriftServer {
           switch (schemeField.id) {
             case 0: // SUCCESS
               if (schemeField.type == org.apache.thrift.protocol.TType.STRUCT) {
-                struct.success = new roman.easythrift.thrift.generated.TPerson();
+                struct.success = new TPerson();
                 struct.success.read(iprot);
                 struct.setSuccessIsSet(true);
               } else { 
@@ -954,7 +954,7 @@ public class TPersonThriftServer {
         TTupleProtocol iprot = (TTupleProtocol) prot;
         BitSet incoming = iprot.readBitSet(1);
         if (incoming.get(0)) {
-          struct.success = new roman.easythrift.thrift.generated.TPerson();
+          struct.success = new TPerson();
           struct.success.read(iprot);
           struct.setSuccessIsSet(true);
         }

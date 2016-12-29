@@ -16,7 +16,7 @@
     <import resource="classpath:app-dao.xml"/>
 
     <!-- 配置要扫描的包 -->
-    <context:component-scan base-package="roman.easythrift.service"/>
+    <context:component-scan base-package="roman.easythrift.demo.service"/>
 
     <!--proxy-target-class="true"使用cglib代理 开启支持aspectj -->
     <aop:aspectj-autoproxy proxy-target-class="true"/>

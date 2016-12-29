@@ -1,15 +1,15 @@
-package roman.easythrift.thrift.server;
+package roman.easythrift.demo.thrift.server;
 
 
-import roman.easythrift.server.AbstractThriftServer;
+import roman.easythrift.demo.server.AbstractThriftServer;
 import org.apache.thrift.TException;
 import org.apache.thrift.TProcessor;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import roman.easythrift.domain.Person;
-import roman.easythrift.service.PersonService;
-import roman.easythrift.thrift.generated.TPerson;
-import roman.easythrift.thrift.generated.TPersonThriftServer;
+import roman.easythrift.demo.domain.Person;
+import roman.easythrift.demo.service.PersonService;
+import roman.easythrift.demo.thrift.generated.TPerson;
+import roman.easythrift.demo.thrift.generated.TPersonThriftServer;
 
 
 /**

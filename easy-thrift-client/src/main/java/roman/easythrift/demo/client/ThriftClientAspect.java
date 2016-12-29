@@ -1,4 +1,4 @@
-package roman.easythrift.client;
+package roman.easythrift.demo.client;
 
 import org.apache.thrift.TServiceClient;
 import org.aspectj.lang.JoinPoint;
@@ -18,7 +18,7 @@ import java.lang.reflect.Method;
 @Aspect
 public class ThriftClientAspect {
 
-    @Pointcut("this(roman.easythrift.client.ThriftClient)")
+    @Pointcut("this(roman.easythrift.demo.client.ThriftClient)")
     public void pointCut() {
     }
 

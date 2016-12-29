@@ -1,10 +1,10 @@
-package roman.easythrift.dao.impl;
+package roman.easythrift.demo.dao.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import roman.easythrift.dao.PersonDao;
-import roman.easythrift.dao.sql.PersonDaoSql;
-import roman.easythrift.domain.Person;
+import roman.easythrift.demo.dao.PersonDao;
+import roman.easythrift.demo.dao.sql.PersonDaoSql;
+import roman.easythrift.demo.domain.Person;
 
 /**
  * Created by roman.luo on 2016/11/17.

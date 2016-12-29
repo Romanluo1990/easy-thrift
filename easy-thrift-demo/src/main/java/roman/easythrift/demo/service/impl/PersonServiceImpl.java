@@ -1,9 +1,9 @@
-package roman.easythrift.service.impl;
+package roman.easythrift.demo.service.impl;
 
-import roman.easythrift.domain.Person;
-import roman.easythrift.service.PersonService;
+import roman.easythrift.demo.domain.Person;
+import roman.easythrift.demo.service.PersonService;
 
-import roman.easythrift.dao.PersonDao;
+import roman.easythrift.demo.dao.PersonDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * Created by roman.luo on 2016/11/17.
  */
 @Service
-public class PersonServiceImpl implements PersonService{
+public class PersonServiceImpl implements PersonService {
 
     @Autowired
     private PersonDao personDao;
