@@ -3,8 +3,7 @@ easy-thrift是利用spring的切面对thrift的简单封装，是的在spring中
 
 ##easy-thrift结构
 
-* easy-thrift-client 调用thrift的客户端的封装
-* easy-thrift-server 提供thrift的服务端的封装
+* easy-thrift-core 调用thrift的服务端,客户端的封装
 * easy-thrift-demo 一个简单的demo
 
 
@@ -13,10 +12,10 @@ easy-thrift是利用spring的切面对thrift的简单封装，是的在spring中
 * server端spring配置：
     ```xml
     <!--启动的thrift服务-->
-    <bean class="roman.easythrift.thrift.server.PersonThriftServer">
-        <constructor-arg name="host" value="${demo.person.host}"></constructor-arg>
-        <constructor-arg name="port" value="${demo.person.port}"></constructor-arg>
-        <constructor-arg name="serverName" value="personThriftServer"></constructor-arg>
+    <bean class="roman.easythrift.demo.thrift.server.PersonThriftServer">
+        <property name="serverName" value="personThriftServer"></property>
+        <property name="host" value="${demo.person.host}"></property>
+        <property name="port" value="${demo.person.port}"></property>
     </bean>
     ```
 
@@ -30,7 +29,7 @@ easy-thrift是利用spring的切面对thrift的简单封装，是的在spring中
     </bean>
 
     <!--使用服务的客户端-->
-    <bean id="personThriftClient" class="roman.easythrift.thrift.clinet.PersonThriftClient">
+    <bean id="personThriftClient" class="roman.easythrift.demo.thrift.clinet.PersonThriftClient">
         <constructor-arg name="host" value="${demo.person.host}"></constructor-arg>
         <constructor-arg name="port" value="${demo.person.port}"></constructor-arg>
     </bean>
