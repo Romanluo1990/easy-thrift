@@ -16,11 +16,6 @@
 
         <dependency>
             <groupId>easy-thrift</groupId>
-            <artifactId>easy-thrift-client</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>easy-thrift</groupId>
             <artifactId>easy-thrift-server</artifactId>
         </dependency>
 

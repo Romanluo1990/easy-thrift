@@ -1,4 +1,4 @@
-package roman.easythrift.demo.client;
+package roman.easythrift.client;
 
 import org.apache.thrift.TException;
 import org.apache.thrift.TServiceClient;

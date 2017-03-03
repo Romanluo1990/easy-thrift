@@ -41,7 +41,7 @@
     <!-- 自动扫描Mapper接口 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
-        <property name="basePackage" value="roman.easythrift.dao.sql"/>
+        <property name="basePackage" value="roman.easythrift.demo.dao.sql"/>
     </bean>
 
     <!-- 配置要扫描的包 -->

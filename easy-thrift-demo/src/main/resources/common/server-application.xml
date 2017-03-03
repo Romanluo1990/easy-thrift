@@ -24,9 +24,9 @@
 
     <!--启用Thrift Server服务-->
     <bean class="roman.easythrift.demo.thrift.server.PersonThriftServer">
-        <constructor-arg name="host" value="${demo.person.host}"></constructor-arg>
-        <constructor-arg name="port" value="${demo.person.port}"></constructor-arg>
-        <constructor-arg name="serverName" value="personThriftServer"></constructor-arg>
+        <property name="serverName" value="personThriftServer"></property>
+        <property name="host" value="${demo.person.host}"></property>
+        <property name="port" value="${demo.person.port}"></property>
     </bean>
 
 </beans>

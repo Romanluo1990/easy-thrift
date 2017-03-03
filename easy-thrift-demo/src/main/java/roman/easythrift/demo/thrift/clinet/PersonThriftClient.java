@@ -2,9 +2,9 @@ package roman.easythrift.demo.thrift.clinet;
 
 
 import org.apache.thrift.TException;
-import roman.easythrift.demo.client.AbstractThriftClient;
-import roman.easythrift.demo.thrift.generated.TPersonThriftServer;
+import roman.easythrift.client.AbstractThriftClient;
 import roman.easythrift.demo.thrift.generated.TPerson;
+import roman.easythrift.demo.thrift.generated.TPersonThriftServer;
 
 
 /**

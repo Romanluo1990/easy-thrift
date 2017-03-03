@@ -10,7 +10,6 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>easy-thrift-server</module>
-        <module>easy-thrift-client</module>
         <module>easy-thrift-demo</module>
     </modules>
 
@@ -29,6 +28,7 @@
         <janino.version>2.3.12</janino.version>
         <commons-compiler.version>2.6.1</commons-compiler.version>
         <junit.version>4.10</junit.version>
+        <beanutils.version>1.9.3</beanutils.version>
 
         <dev.version>1.0-SNAPSHOT</dev.version>
         <uat.version>1.0-UAT</uat.version>
@@ -46,17 +46,17 @@
                 <version>${myproject.version}</version>
             </dependency>
 
-            <dependency>
-                <groupId>easy-thrift</groupId>
-                <artifactId>easy-thrift-client</artifactId>
-                <version>${myproject.version}</version>
-            </dependency>
-
             <!-- commons -->
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
                 <version>${commons-lang3}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring.version}</version>
             </dependency>
 
             <!-- https://mvnrepository.com/artifact/org.springframework/spring-context-support -->
@@ -88,6 +88,13 @@
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-webmvc</artifactId>
                 <version>${spring.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/commons-beanutils/commons-beanutils -->
+            <dependency>
+                <groupId>commons-beanutils</groupId>
+                <artifactId>commons-beanutils</artifactId>
+                <version>${beanutils.version}</version>
             </dependency>
 
             <!-- cglib -->

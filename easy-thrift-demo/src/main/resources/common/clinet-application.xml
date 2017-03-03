@@ -24,7 +24,7 @@
     <aop:aspectj-autoproxy proxy-target-class="true"/>
 
     <!--使用ThriftClientAspect-->
-    <bean id="thriftClientAspect" class="roman.easythrift.demo.client.ThriftClientAspect">
+    <bean id="thriftClientAspect" class="roman.easythrift.client.ThriftClientAspect">
     </bean>
 
     <bean id="personThriftClient" class="roman.easythrift.demo.thrift.clinet.PersonThriftClient">
